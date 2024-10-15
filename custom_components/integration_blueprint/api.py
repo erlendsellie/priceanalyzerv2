@@ -40,13 +40,11 @@ class IntegrationBlueprintApiClient:
 
     def __init__(
         self,
-        username: str,
-        password: str,
+        entity_id: str,
         session: aiohttp.ClientSession,
     ) -> None:
         """Sample API Client."""
-        self._username = username
-        self._password = password
+        self._entity_id = entity_id
         self._session = session
 
     async def async_get_data(self) -> Any:
