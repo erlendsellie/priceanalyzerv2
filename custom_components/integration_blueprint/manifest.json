@@ -1,12 +1,12 @@
 {
-  "domain": "integration_blueprint",
-  "name": "Integration blueprint",
+  "domain": "priceanalyzer",
+  "name": "Priceanalyzer",
   "codeowners": [
-    "@ludeeus"
+    "@erlendsellie"
   ],
   "config_flow": true,
-  "documentation": "https://github.com/ludeeus/integration_blueprint",
+  "documentation": "https://github.com/erlendsellie/priceanalyzer",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/ludeeus/integration_blueprint/issues",
+  "issue_tracker": "https://github.com/erlendsellie/priceanalyzer/issues",
   "version": "0.0.0"
 }

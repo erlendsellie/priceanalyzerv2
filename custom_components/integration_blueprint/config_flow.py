@@ -48,7 +48,8 @@ class BlueprintFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
             data_schema=vol.Schema(
                 {
                     vol.Required(CONF_ENTITY_ID): selector.EntitySelector(
-                        selector.EntitySelectorConfig(domain="nordpool")
+                        selector.EntitySelectorConfig()
+                        # selector.EntitySelectorConfig(domain="nordpool")
                     )
                 },
             ),
@@ -61,5 +62,6 @@ class BlueprintFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
         client = IntegrationBlueprintApiClient(
             entity_id=entity_id,
             session=async_create_clientsession(self.hass),
+            hass=self.hass,
         )
         await client.async_get_data()

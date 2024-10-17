@@ -1,4 +1,4 @@
-"""Switch platform for integration_blueprint."""
+"""Switch platform for priceanalyzer."""
 
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ if TYPE_CHECKING:
 
 ENTITY_DESCRIPTIONS = (
     SwitchEntityDescription(
-        key="integration_blueprint",
+        key="priceanalyzer",
         name="Integration Switch",
         icon="mdi:format-quote-close",
     ),
@@ -40,7 +40,7 @@ async def async_setup_entry(
 
 
 class IntegrationBlueprintSwitch(IntegrationBlueprintEntity, SwitchEntity):
-    """integration_blueprint switch class."""
+    """priceanalyzer switch class."""
 
     def __init__(
         self,
@@ -54,6 +54,7 @@ class IntegrationBlueprintSwitch(IntegrationBlueprintEntity, SwitchEntity):
     @property
     def is_on(self) -> bool:
         """Return true if the switch is on."""
+        return False
         return self.coordinator.data.get("title", "") == "foo"
 
     async def async_turn_on(self, **_: Any) -> None:
