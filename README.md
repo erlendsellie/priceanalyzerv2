@@ -1,3 +1,12 @@
+New code for https://github.com/erlendsellie/priceanalyzer/, which will be merged with the main repo once ready.
+
+This repo uses the nordpool-sensor to fetch data.
+A lot of work needs to be done. As of now, a dummy-sensor is provided by api.py for development purposes.
+
+
+
+-----------------
+
 # Notice
 
 The component and platforms in this repository are not meant to be used by a
