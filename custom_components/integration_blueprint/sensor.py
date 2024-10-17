@@ -90,7 +90,10 @@ class PriceAnalyzerSensor(IntegrationBlueprintEntity, SensorEntity):
 
     @property
     def nordpool_attributes(self) -> dict:
-        return self.nordpool  # must be .attributes when done
+        if self.nordpool.get("attributes") is not None:
+            return self.nordpool.get("attributes")
+        else:
+            return self.nordpool
 
     @property
     def extra_state_attributes(self) -> dict:
