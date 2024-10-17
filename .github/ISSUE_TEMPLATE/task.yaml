@@ -1,0 +1,27 @@
+---
+name: "Task"
+description: "Task for this project"
+labels: "Task"
+body:
+
+- type: textarea
+  attributes:
+    label: "Name the task."
+    description: "A clear and concise description of what the task is."
+    placeholder: "This or that function is needed to ..."
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: "How to solve the task"
+    description: "By implementing a new class that uses ..."
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: "Additional context"
+    description: "Add any other context or screenshots about the feature request here."
+  validations:
+    required: true
