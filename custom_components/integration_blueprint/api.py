@@ -53,7 +53,7 @@ class IntegrationBlueprintApiClient:
     async def async_get_data(self) -> Any:
         """Get data from the API."""
 
-        return self.get_dummy_sensor()
+        # return self.get_dummy_sensor()
 
         nordpool_entity = self._hass.states.get(self._entity_id)
         if nordpool_entity:

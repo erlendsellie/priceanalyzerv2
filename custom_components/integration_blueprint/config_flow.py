@@ -48,8 +48,8 @@ class BlueprintFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
             data_schema=vol.Schema(
                 {
                     vol.Required(CONF_ENTITY_ID): selector.EntitySelector(
-                        selector.EntitySelectorConfig()
-                        # selector.EntitySelectorConfig(domain="nordpool")
+                        # selector.EntitySelectorConfig()
+                        selector.EntitySelectorConfig(domain="nordpool")
                     )
                 },
             ),
